@@ -2,7 +2,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-//wazaaa
+//probando esto
 #define ANCHO_PANTALLA 128 // Ancho de la pantalla OLED
 #define ALTO_PANTALLA 64 // Alto de la pantalla OLED
 #define OLED_RESET     -1 // Pin reset incluido en algunos modelos de pantallas (-1 si no disponemos de pulsador). 
