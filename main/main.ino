@@ -1,4 +1,7 @@
 //Hola mi gente
+//Integrantes:
+//Euroza Rodriguez Diego Rodrigo
+//Isidro Gomez Cesar Octavio
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
