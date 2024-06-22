@@ -11,9 +11,9 @@
 #define OLED_RESET     -1 // Pin reset incluido en algunos modelos de pantallas (-1 si no disponemos de pulsador). 
 #define DIRECCION_PANTALLA 0x3C //Dirección de comunicacion: 0x3D para 128x64, 0x3C para 128x32
 #define LF_WIDHT 32
-#define LF_RIGHT 32
+#define LF_HEIGHT 32
 #define LB_WIDHT 32
-#define LB_RIGHT 32
+#define LB_HEIGHT 32
 const unsigned char PROGMEM LF []  = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x80, 0x00, 0x00, 0x01, 0xc0, 0x00, 0x00, 0x01, 0x60, 0x00, 
@@ -79,7 +79,7 @@ void loop() {
         int grados = millivolts; 
 
         if(grados>=50){
-        display.drawBitmap( (display.width() - LOGO_WIDTH ) / 2,((display.height()- LOGO_HEIGHT) / 2 )+7, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
+        display.drawBitmap( (display.width() - LF_WIDTH ) / 2,((display.height()- LF_HEIGHT) / 2 )+7, logo, LF_WIDTH, LF_HEIGHT, WHITE);
         display.display();
         alarma=1; //ALARMA ACTIVADA
         }
