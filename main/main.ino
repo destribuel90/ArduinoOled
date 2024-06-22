@@ -53,10 +53,10 @@ void loop() {
         if(grados>=50){
         alarma=1; //ALARMA ACTIVADA
         }
-        Serial.println(grados);
+        
         display.setTextSize(1);
         display.setTextColor(WHITE);
-        display.setCursor(0,0);
+        display.setCursor(2,2);
         display.println("Temperatura:");
         display.println(grados);
         display.display();
@@ -95,10 +95,9 @@ void distancia()
   digitalWrite(Trigger, LOW);
   t = pulseIn(Echo, HIGH); //obtenemos el ancho del pulso
   d = t/59;             //escalamos el tiempo a una distancia en cm
-  Serial.println(d);
   display.setTextSize(1);
   display.setTextColor(WHITE);
-  display.setCursor(0,0);
+  display.setCursor(12,2);
   display.println("Distancia:");
   display.println(d);
   display.display();
