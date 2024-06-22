@@ -10,6 +10,7 @@
 #define ALTO_PANTALLA 64 // Alto de la pantalla OLED
 #define OLED_RESET     -1 // Pin reset incluido en algunos modelos de pantallas (-1 si no disponemos de pulsador). 
 #define DIRECCION_PANTALLA 0x3C //Dirección de comunicacion: 0x3D para 128x64, 0x3C para 128x32
+Adafruit_SSD1306 display(ANCHO_PANTALLA, ALTO_PANTALLA, &Wire, OLED_RESET);
 #define LF_WIDHT 32
 #define LF_HEIGHT 32
 #define LB_WIDHT 32
