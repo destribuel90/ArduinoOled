@@ -89,8 +89,11 @@ void loop() {
         display.setCursor(2,2);
         display.println("Temperatura:");
         display.println(grados);
+	display.setCursor(2,12);
+        display.println("Distancia:");
+        display.println(distancia();
         display.display();
-        distancia();
+        
         //se muestra la cara normal
   }
    //se muestra la cara enfadada
@@ -118,19 +121,14 @@ distancia();
 
 
 /////////////////////////////////////////////////////////////
-void distancia()
+float distancia()
 {
   digitalWrite(Trigger, HIGH);
   delayMicroseconds(10);          //Enviamos un pulso de 10us
   digitalWrite(Trigger, LOW);
   t = pulseIn(Echo, HIGH); //obtenemos el ancho del pulso
   d = t/59;             //escalamos el tiempo a una distancia en cm
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(12,2);
-  display.println("Distancia:");
-  display.println(d);
-  display.display();
+return d;
 }
 //////////////////////////////////////////
 void controlBT(){
