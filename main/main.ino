@@ -91,7 +91,7 @@ void loop() {
         display.setCursor(2, 2);
         display.println("Temperatura:");
         display.println(grados);
-        display.setCursor(2, 12);
+        display.setCursor(2, 13);
         display.println("Distancia:");
         display.println(distancia());
         display.display();
