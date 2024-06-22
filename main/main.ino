@@ -134,6 +134,7 @@ void distancia()
 }
 //////////////////////////////////////////
 void controlBT(){
+display.clearDisplay(); 
 display.drawBitmap( (display.width() - LB_WIDTH ) / 2,((display.height()- LB_HEIGHT) / 2 )+7, lb, LB_WIDTH, LB_HEIGHT, WHITE);
 display.display();
   while(bandera==0){
