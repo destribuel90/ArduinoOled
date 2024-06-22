@@ -1,4 +1,7 @@
 //Hola mi gente
+//Integrantes:
+//Euroza Rodriguez Diego Rodrigo
+//Isidro Gomez Cesar Octavio
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -14,7 +17,7 @@ long d=100; //distancia en centimetros
 int bandera=0;
  float grados= 40; 
  int alarma=0;       
- xdddd 
+ //xdddd 
 void setup() {
     Serial.begin(9600);
   if(!display.begin(SSD1306_SWITCHCAPVCC, DIRECCION_PANTALLA)) {
