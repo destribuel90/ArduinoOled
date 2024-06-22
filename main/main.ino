@@ -67,6 +67,8 @@ void loop() {
         int grados = millivolts; 
 
         if(grados>=50){
+        display.drawBitmap( (display.width() - LOGO_WIDTH ) / 2,((display.height()- LOGO_HEIGHT) / 2 )+7, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
+        display.display();
         alarma=1; //ALARMA ACTIVADA
         }
         
