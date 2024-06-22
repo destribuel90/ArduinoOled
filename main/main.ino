@@ -134,7 +134,7 @@ void distancia()
 }
 //////////////////////////////////////////
 void controlBT(){
-display.drawBitmap( (display.width() - LOGO_WIDTH ) / 2,((display.height()- LOGO_HEIGHT) / 2 )+7, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
+display.drawBitmap( (display.width() - LB_WIDTH ) / 2,((display.height()- LB_HEIGHT) / 2 )+7, logo, LB_WIDTH, LB_HEIGHT, WHITE);
 display.display();
   while(bandera==0){
   if (Serial.available())
