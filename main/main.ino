@@ -6,7 +6,6 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-// cambios para mí jaja nadie sabe nooooo
 #define ANCHO_PANTALLA 128 // Ancho de la pantalla OLED
 #define ALTO_PANTALLA 64 // Alto de la pantalla OLED
 #define OLED_RESET -1 // Pin reset incluido en algunos modelos de pantallas (-1 si no disponemos de pulsador). 
@@ -15,7 +14,7 @@
 #define LF_HEIGHT 32
 #define LB_WIDTH 32
 #define LB_HEIGHT 32
-
+//viendo tags
 Adafruit_SSD1306 display(ANCHO_PANTALLA, ALTO_PANTALLA, &Wire, OLED_RESET);
 
 const unsigned char PROGMEM lf []  = {
