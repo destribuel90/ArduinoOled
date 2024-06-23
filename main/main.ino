@@ -119,7 +119,7 @@ void loop() {
         bandera = 0;
     }
 }
-
+//xdddd
 float distancia() {
     digitalWrite(Trigger, HIGH);
     delayMicroseconds(10); // Enviamos un pulso de 10us
