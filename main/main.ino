@@ -6,7 +6,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-
+// cambios para mí jaja nadie sabe nooooo
 #define ANCHO_PANTALLA 128 // Ancho de la pantalla OLED
 #define ALTO_PANTALLA 64 // Alto de la pantalla OLED
 #define OLED_RESET -1 // Pin reset incluido en algunos modelos de pantallas (-1 si no disponemos de pulsador). 
@@ -83,16 +83,19 @@ void loop() {
             display.clearDisplay();
             display.drawBitmap((display.width() - LF_WIDTH) / 2, ((display.height() - LF_HEIGHT) / 2) + 7, lf, LF_WIDTH, LF_HEIGHT, WHITE);
             display.display();
-            alarma = 1; // ALARMA ACTIVADA
+             d = 100;
+             alarma = 1;
+            break;
+            // ALARMA ACTIVADA
         }
-        
+        display.clearDisplay();
         display.setTextSize(1);
         display.setTextColor(WHITE);
         display.setCursor(2, 2);
-        display.println("Temperatura:");
+        display.print("Temperatura:");
         display.println(grados);
-        display.setCursor(2, 12);
-        display.println("Distancia:");
+        display.setCursor(2, 13);
+        display.print("Distancia:");
         display.println(distancia());
         display.display();
     }
@@ -136,10 +139,10 @@ void controlBT() {
             Serial.println(dato);
             switch (dato) {
                 case 'F':
-                    digitalWrite(4, LOW);
-                    digitalWrite(5, HIGH);
-                    digitalWrite(6, HIGH);
-                    digitalWrite(7, LOW);
+                    digitalWrite(5, LOW);
+                    digitalWrite(4, HIGH);
+                    digitalWrite(7, HIGH);
+                    digitalWrite(6, LOW);
                     break;
                 case 'L':
                     digitalWrite(4, HIGH);
@@ -154,10 +157,10 @@ void controlBT() {
                     digitalWrite(7, HIGH);
                     break;
                 case 'B':
-                    digitalWrite(5, LOW);
-                    digitalWrite(4, HIGH);
-                    digitalWrite(7, HIGH);
-                    digitalWrite(6, LOW);
+                    digitalWrite(4, LOW);
+                    digitalWrite(5, HIGH);
+                    digitalWrite(6, HIGH);
+                    digitalWrite(7, LOW);
                     break;
                 case 'X':
                     bandera = 1;
@@ -180,16 +183,16 @@ void controlBT() {
 
 void direccion() {
     if((digitalRead(2) == 0) && (digitalRead(3) == 0)) {
-        digitalWrite(4, LOW);
-        digitalWrite(5, HIGH);
-        digitalWrite(6, HIGH);
-        digitalWrite(7, LOW);
+        digitalWrite(5, LOW);
+        digitalWrite(4, HIGH);
+        digitalWrite(7, HIGH);
+        digitalWrite(6, LOW);
     }
     if(digitalRead(2) == 0 && digitalRead(3) == 1) {
         digitalWrite(4, LOW);
         digitalWrite(5, HIGH);
-        digitalWrite(6, LOW);
-        digitalWrite(7, HIGH);
+        digitalWrite(7, LOW);
+        digitalWrite(6, HIGH);
     }
     if(digitalRead(2) == 1 && digitalRead(3) == 0) {
         digitalWrite(4, HIGH);
