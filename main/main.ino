@@ -17,6 +17,8 @@
 #define LB_HEIGHT 32
 // nooooo jaja xddd
 // nose mis  momos nose xd
+// nose mis  momos aaaaaaaaa
+//jajaa
 // nose mis  momos
 //jajaa xddddddd
 Adafruit_SSD1306 display(ANCHO_PANTALLA, ALTO_PANTALLA, &Wire, OLED_RESET);
